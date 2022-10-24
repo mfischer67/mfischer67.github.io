@@ -104,7 +104,7 @@ Then delete the # from the %wheel ALL=(ALL) ALL statement
 
 Repeat for yourself user
 
-![Users](/users.png)
+![Users](/listofusers.png)
 
 ![User Privileges](/userpriv.png)
 
