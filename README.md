@@ -104,6 +104,10 @@ Then delete the # from the %wheel ALL=(ALL) ALL statement
 
 Repeat for yourself user
 
+![Users](/users.png)
+
+![User Privileges](/userpriv.png)
+
 ### Part 4: Install ZSH
 
 To install zsh, you do `pacman -S zsh`
@@ -126,6 +130,8 @@ To add color to pacman, you run `sed -I ‘s/#Color/Color/g’ /etc/pacman.conf`
 
 To add color to nano, you first `nano  /etc/nanorc` and the delete the # before the statement “include “/usr/share/nano/*.nanorc”
 
+![Colors](/colors.png)
+
 ### Part 7: Aliases
 
 To add aliases, you do “alias name = ‘command’”
@@ -136,24 +142,3 @@ For example alias c= ‘clear’
 
 `Pacman -Syu firefox` is the command to use to install Firefox
 
-
-![ADS-B OUT](images/adsb_out.png)
-
- 
- 
-
-![Work](images/work.png)
-
- 
- 
-
-![YAML](images/yaml.png)
-
-
- 
-
-![Flow Graph](images/gnuRadio.png)
-
- 
-
-## Conclusion
