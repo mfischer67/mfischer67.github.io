@@ -9,7 +9,7 @@ First, once you install the ISO, you have to check the SHA1 hash of the file to 
 
 The keyboard is defaulted into US, so that doesn’t need to be changed. But can be changed by typing ls/usr/share/kbd/keymaps/**/*.map.gz
 
-Then you have to verify the boot mode and ensure that it’s in UEFI mode. To do that, you run the command ls/sys/firmware/efi/efivars
+Then you have to verify the boot mode and ensure that it’s in UEFI mode. To do that, you run the command `ls/sys/firmware/efi/efivars`
 
 Then you check if the vm is connected to the internet with the command ip link
 
