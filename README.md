@@ -3,7 +3,8 @@
 ### Madison Fischer
 
 ## Methodology
-###Part 1
+### Part 1: Installing Arch Linux
+
 First, once you install the ISO, you have to check the SHA1 hash of the file to ensure you downloaded the correct file. To do that, you run the command  shasum -a and then the file name in the terminal. Then you check the SHA 1 hash in the terminal with the SHA 1 has provided in a file from the download page.
 
 The keyboard is defaulted into US, so that doesn’t need to be changed. But can be changed by typing ls/usr/share/kbd/keymaps/**/*.map.gz
@@ -12,73 +13,73 @@ Then you have to verify the boot mode and ensure that it’s in UEFI mode. To do
 
 Then you check if the vm is connected to the internet with the command ip link
 
-Then we verify the connection by the command ping archlinux.org
+Then we verify the connection by the command `ping archlinux.org`
 
-Then we check if the system clock is updated with timedatectl status
+Then we check if the system clock is updated with `timedatectl status`
 
 -	Got confused at this step and had to google to find what command to type
 
-Then to make the partition, we run cfdisk /dev/sda and then we select gpt for the label type
+Then to make the partition, we run `cfdisk /dev/sda` and then we select gpt for the label type
 
 We then press Enter to select New and then type 500M and press Enter to create the EFI partition. We then use the right arrow to select Type and change the type to EFI System
 
 We then press down to select Free space and press Enter on New to create sda2 and use the  (x86-64)
 
-We then format the partitions first by doing mkfs.ext4 /dev/sda2
+We then format the partitions first by doing `mkfs.ext4 /dev/sda2`
 
-We then format the EFI partition system by doing mkfs.fat -F 32 /dev/sda1
+We then format the EFI partition system by doing `mkfs.fat -F 32 /dev/sda1`
 
-We then mount the root partition by doing mount /dev/sda2 /mnt
+We then mount the root partition by doing `mount /dev/sda2 /mnt`
 
-We then mount the EFI partition by doing mount –mkdir /dev/sda1 /mnt/not
+We then mount the EFI partition by doing `mount –mkdir /dev/sda1 /mnt/not`
 
-We then install the essential packages by running pacstrap -K /mnt base linux linux-firmware
+We then install the essential packages by running `pacstrap -K /mnt base linux linux-firmware`
 
-We then created an fstab file with the command genfstab -U /mnt >> /mnt/etc/fstab
+We then created an fstab file with the command `genfstab -U /mnt >> /mnt/etc/fstab`
 
-We then change the root into a new system by doing arch-chroot /mnt
+We then change the root into a new system by doing `arch-chroot /mnt`
 
 -	Had an issue with knowing what time zone I was in
 
-We then set the time zone by doing ln -sf /usr/share/zoneinfo/US/Chicago /etc/localtime
+We then set the time zone by doing `ln -sf /usr/share/zoneinfo/US/Chicago /etc/localtime`
 
-Next we install nano by running pacman -S nano 
+Next we install nano by running `pacman -S nano` 
 
-Now we need to edit the locale gen by running locale-gen
+Now we need to edit the locale gen by running `locale-gen`
 
-Then we create the locale.conf file by running nano /etc/locale.conf and we add LANG=en_US.UTF-8
+Then we create the locale.conf file by running `nano /etc/locale.conf` and we add LANG=en_US.UTF-8
 
-We then edit /etc/hostname by running nano /etc/hostname and adding archvm, our network name
+We then edit /etc/hostname by running `nano /etc/hostname` and adding archvm, our network name
 
-Then we edit /etc/hosts with nano /etc/hosts and add archvm to it
+Then we edit /etc/hosts with `nano /etc/hosts` and add archvm to it
 
 We then need to configure the networks
 
-First by running systemctl enable system-networkd
+First by running `systemctl enable system-networkd`
 
-Then run systemctl enable system-resolved
+Then run `systemctl enable system-resolved`
 
-Then we find out network interface by running ip addr
+Then we find out network interface by running `ip addr`
 
 We then find out we have the interface of ens32
 
-Next, we edit a certain file by running nano /etc/system/network/20-wired.network 
+Next, we edit a certain file by running `nano /etc/system/network/20-wired.network`
 
 We then add [Match] Name=ens32 [Network] DHCP=yes
 
 Next we set the password by typing passwd and creating our password 
 
-We then install intel microcode by typing pacman -S intel-ucode
+We then install intel microcode by typing `pacman -S intel-ucode`
 
 Next we install the boot loader
 
-We do that by first installing grub and efibootmgr by using the command pacman -S grub efibootmgr
+We do that by first installing grub and efibootmgr by using the command `pacman -S grub efibootmgr`
 
-We install grub bootloader to the EFI partition with the command grub-install –target=x86_64-efi –efi-directory=/boot –bootloader-id=GRUB
+We install grub bootloader to the EFI partition with the command `grub-install –target=x86_64-efi –efi-directory=/boot –bootloader-id=GRUB`
 
-We then generate the main grub configuration by running grub-mkconfig -o /boot/grub/grub.cfg
+We then generate the main grub configuration by running `grub-mkconfig -o /boot/grub/grub.cfg`
 
-
+### Part 2: Installing LXDE
 
 ![ADS-B OUT](images/adsb_out.png)
 
