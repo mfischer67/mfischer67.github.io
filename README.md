@@ -80,6 +80,62 @@ We install grub bootloader to the EFI partition with the command `grub-install �
 We then generate the main grub configuration by running `grub-mkconfig -o /boot/grub/grub.cfg`
 
 ### Part 2: Installing LXDE
+We first install LXDE by running `Pacman -S lxde`
+
+We then have to nano into the xinitrc file with `Nano ~/.xinitrc`
+
+Then we add execstartlxde to the file and then save it
+
+We then have to enable LXDE by running `Systemctl enable lxde`
+
+We then start LXDE by running `Systemctl start lxde` 
+
+### Part 3: Create a User
+
+We first add the user by running `useradd Codi`
+
+We then set the password for Codi by running `passwd Codi` and set the password for Codi
+
+Then we have to add Codi to the group wheel in order to give him sudo privileges by running `usermod -aG wheel codi`
+
+Then you have to nano into a document by doing `nano /etc/sudoers`
+
+Then delete the # from the %wheel ALL=(ALL) ALL statement
+
+Repeat for yourself user
+
+### Part 4: Install ZSH
+
+To install zsh, you do `pacman -S zsh`
+
+To access zsh, you simply type `zsh`
+
+### Part 5: Install SSH
+
+To install ssh, you first run `pacman -Sy`
+
+Then you run `pacman -S openssh`
+
+You then have to enable ssh by running `systemctl enable sshd`
+
+You can check the status of that by running `systemctl status sshd`
+
+### Part 6: Add Color
+
+To add color to pacman, you run `sed -I ‘s/#Color/Color/g’ /etc/pacman.conf`
+
+To add color to nano, you first `nano  /etc/nanorc` and the delete the # before the statement “include “/usr/share/nano/*.nanorc”
+
+### Part 7: Aliases
+
+To add aliases, you do “alias name = ‘command’”
+
+For example alias c= ‘clear’
+
+### Part 8: Installing a Browser 
+
+`Pacman -Syu firefox` is the command to use to install Firefox
+
 
 ![ADS-B OUT](images/adsb_out.png)
 
