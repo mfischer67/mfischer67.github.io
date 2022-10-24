@@ -17,7 +17,7 @@ Then we verify the connection by the command `ping archlinux.org`
 
 Then we check if the system clock is updated with `timedatectl status`
 
--	Got confused at this step and had to google to find what command to type
+-	Got confused at this next step and had to google to find what command to type
 
 Then to make the partition, we run `cfdisk /dev/sda` and then we select gpt for the label type
 
