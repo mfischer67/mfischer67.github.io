@@ -5,6 +5,8 @@
 ## Methodology
 ### Part 1: Installing Arch Linux
 
+When I got confused during the project, I used this link to guide me through the project https://linuxconfig.org/install-arch-linux-in-vmware-workstation#:~:text=First%2C%20download%20the%20Arch%20Linux,and%20then%20New%20Virtual%20Machine%20.&text=Under%20Install%20Operating%20System%20from,Linux%20ISO%20then%20click%20next%20.&text=Click%20Linux%20under%20Guest%20Operating%20System%20.
+
 First, once you install the ISO, you have to check the SHA1 hash of the file to ensure you downloaded the correct file. To do that, you run the command  shasum -a and then the file name in the terminal. Then you check the SHA 1 hash in the terminal with the SHA 1 has provided in a file from the download page.
 
 The keyboard is defaulted into US, so that doesn’t need to be changed. But can be changed by typing ls/usr/share/kbd/keymaps/**/*.map.gz
