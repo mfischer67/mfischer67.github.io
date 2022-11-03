@@ -5,6 +5,7 @@
 ## Methodology
 
 I used this source for installing WordPress: https://www.hostinger.com/tutorials/run-docker-wordpress
+I used this source to look up IP address: https://www.linuxtrainingacademy.com/determine-public-ip-address-command-line-curl/
 
 We installed docker and docker compose in class via the Powerpoint Slides 
 
@@ -20,6 +21,10 @@ After that, I chose to use VS Code to create my .yml file, then I inserted the i
 
 Then to finish the installation of wordpress, I put in the command `docker compose up -d` which finished the install of wordpress 
 
-* I ran into some issues of the port 8080 not connection properly
+* I ran into some issues of the port 8080 not connection properly, I 
 
-Then I had to run the link http://localhost:8080/ to open WordPress. 
+Then I had to run the link http://10.10.1.111:8080/ to open WordPress. 
+
+Then I entered my credentials and made a username and password
+
+Then I was on the main WordPress website 
