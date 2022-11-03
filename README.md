@@ -145,11 +145,10 @@ For example alias c= ‘clear’
 
 `Pacman -Syu firefox` is the command to use to install Firefox
 
-### Project 2 - Docker Project
-### System Administration
-### Madison Fischer
+## Project 2 - Docker Project
+## System Administration
+## Madison Fischer
 
-## Methodology
 
 I used this source for installing WordPress: https://www.hostinger.com/tutorials/run-docker-wordpress
 I used this source to look up IP address: https://www.linuxtrainingacademy.com/determine-public-ip-address-command-line-curl/
