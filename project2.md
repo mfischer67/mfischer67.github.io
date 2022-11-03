@@ -20,6 +20,6 @@ After that, I chose to use VS Code to create my .yml file, then I inserted the i
 
 Then to finish the installation of wordpress, I put in the command `docker compose up -d` which finished the install of wordpress 
 
-- I ran into some issues of the port 8080 not connection properly
+* I ran into some issues of the port 8080 not connection properly
 
 Then I had to run the link http://localhost:8080/ to open WordPress. 
