@@ -31,4 +31,4 @@ Then I was on the main WordPress website
 
 ![Main Page](/mainWordpresspage.png)
 
-![Successful Login](/successful login of wordpress page.png)
+![Successful Login](/successfullogin.png)
