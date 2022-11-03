@@ -1,4 +1,5 @@
-# Project 1 - Arch Linux 
+# Projects
+### Arch Linux
 ### System Administration
 ### Madison Fischer
 
