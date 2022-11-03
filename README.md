@@ -148,7 +148,6 @@ For example alias c= ‘clear’
 ### Project 2 - Docker Project
 ### System Administration
 
-
 I used this source for installing WordPress: https://www.hostinger.com/tutorials/run-docker-wordpress
 I used this source to look up IP address: https://www.linuxtrainingacademy.com/determine-public-ip-address-command-line-curl/
 
