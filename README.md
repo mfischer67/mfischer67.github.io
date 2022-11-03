@@ -145,9 +145,8 @@ For example alias c= ‘clear’
 
 `Pacman -Syu firefox` is the command to use to install Firefox
 
-## Project 2 - Docker Project
-## System Administration
-## Madison Fischer
+### Project 2 - Docker Project
+### System Administration
 
 
 I used this source for installing WordPress: https://www.hostinger.com/tutorials/run-docker-wordpress
