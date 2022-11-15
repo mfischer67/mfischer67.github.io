@@ -73,3 +73,13 @@ services:
  You take the info that is printed out and put it into a text file, and then name the text file any name, but it must end with .conf
  
  You then take that .conf file and put it into WireGuard and then your VPN is done and then you just activate it.
+ 
+ ![WireGuard Active on Phone](/wireguardphone.png)
+ 
+ ![Before WireGuard is Turned On- Phone](/nonwireguardphone.png)
+ 
+ ![After WireGuard is Turned On-Phone](/wireguardactive.png)
+ 
+ ![Before WireGuard is Turned On- Desktop](/beforewireguard.png)
+ 
+ ![After WireGuard is Turned On- Desktop](/afterwireguard.png)
